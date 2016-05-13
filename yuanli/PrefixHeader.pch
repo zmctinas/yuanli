@@ -1,0 +1,83 @@
+//
+//  PrefixHeader.pch
+//  yuanli
+//
+//  Created by 代忙 on 16/3/4.
+//  Copyright © 2016年 wxw. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "HTTPRequest.h"
+#import "interface.h"
+#import "easyflyRegular.h"
+#import "MyMD5.h"
+#import "UIImageView+WebCache.h"
+#import "UIColor+hexColor.h"
+#import "MJRefresh.h"
+#import <ShareSDK/ShareSDK.h>
+#import <ShareSDKConnector/ShareSDKConnector.h>
+
+//腾讯开放平台（对应QQ和QQ空间）SDK头文件
+#import <TencentOpenAPI/TencentOAuth.h>
+#import <TencentOpenAPI/QQApiInterface.h>
+
+//微信SDK头文件
+#import "WXApi.h"
+
+//新浪微博SDK头文件
+#import "WeiboSDK.h"
+
+#import "CrazyAutoLayout.h"
+#import "TMCache.h"
+
+#import "KeyboardManager.h"
+
+#import "FrameSize.h"
+
+#import "alipayObject.h"
+#import "weixinObject.h"
+#import "HealthManager.h"
+
+#import "DateTools.h"
+#import "CellDateModel.h"
+#import "DateModel.h"
+
+#import "fatherViewController.h"
+
+#import "WXprogress.h"
+#import "UIView+Toast.h"
+
+#ifdef DEBUG
+//do sth.
+#define HEADURL @"http://123.59.56.108/yuanli_test/Public/yuanli/index.php"
+#define IMGHEAD @"http://123.59.56.108/yuanli_test/"
+#else
+//do sth.
+#define HEADURL @"http://api.daimang.com/Public/yuanli/index.php"
+#define IMGHEAD @"http://api.daimang.com/"
+#endif
+
+#define LocalHead @"http://123.59.56.108/yuanli_test/Public/yuanli/index.php"
+//#define HEADURL @"http://api.daimang.com/Public/yuanli/index.php"
+//#define IMGHEAD @"http://api.daimang.com/"
+#define LocalImg @"http://123.59.56.108/yuanli_test/"
+
+#define SHAREAppKey @"1035fafa83d34"
+
+
+#define RegistrationID [[NSUserDefaults standardUserDefaults] objectForKey:@"RegistrationID"]
+#define UID [[NSUserDefaults standardUserDefaults]objectForKey:@"UID"]
+#define USERNAME [[NSUserDefaults standardUserDefaults]objectForKey:@"userName"]
+#define USERDefaults [NSUserDefaults standardUserDefaults]
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+#define HEIGHT(f) f * (SCREEN_WIDTH/320.0) //屏幕比例 算出实际UI大小
+
+
+
+#endif /* PrefixHeader_pch */

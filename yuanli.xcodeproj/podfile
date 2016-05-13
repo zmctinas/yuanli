@@ -1,0 +1,12 @@
+# Uncomment this line to define a global platform for your project
+# 项目支持最低版本
+platform :ios, '8.0'
+# Uncomment this line if you're using Swift
+# swift 的项目需要使用 frameworks
+use_frameworks!
+
+# 注释: pod 1.0 版本必须保留
+
+
+# 添加使用框架
+pod 'AFNetworking'
