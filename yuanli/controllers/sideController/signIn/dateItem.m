@@ -93,11 +93,12 @@
     if (_itemBtn == nil) {
         _itemBtn = [UIButton buttonWithType:0];
         _itemBtn.frame = CGRectMake(1, 4, 30, 30);
+        _itemBtn.titleLabel.font = [UIFont systemFontOfSize:14];
         [_itemBtn setTitleColor:[UIColor colorWithHexString:@"#8b8b8b"] forState:UIControlStateNormal];
         [_itemBtn setTitleColor:[UIColor colorWithHexString:@"#8b8b8b"] forState:UIControlStateHighlighted];
         [_itemBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
-        [_itemBtn setBackgroundImage:[UIImage imageNamed:@"qiandao_btn_yiqian.png"] forState:UIControlStateHighlighted];
-        [_itemBtn setBackgroundImage:[UIImage imageNamed:@"qiandao_btn_yiqianjingri@2x"] forState:UIControlStateSelected];
+        [_itemBtn setBackgroundImage:[UIImage imageNamed:@"qiandao_btn_yiqian"] forState:UIControlStateHighlighted];
+        [_itemBtn setBackgroundImage:[UIImage imageNamed:@"qiandao_btn_yiqianjingri"] forState:UIControlStateSelected];
     }
     return _itemBtn;
 }

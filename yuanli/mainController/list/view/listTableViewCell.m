@@ -52,7 +52,7 @@
     NSString* imageUrl = [NSString stringWithFormat:@"%@%@",IMGHEAD,_listModel.photo];
     NSLog(@"%@",imageUrl);
     
-    [self.iconView sd_setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:[UIImage imageNamed:@"paihangbang_morenxiao.png"]];
+    [self.iconView sd_setImageWithURL:[NSURL URLWithString:imageUrl] placeholderImage:[UIImage imageNamed:@"avatordefault"]];
     
     self.iconView.layer.cornerRadius = self.iconView.frame.size.height/2;
     self.iconView.layer.masksToBounds = YES;

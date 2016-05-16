@@ -235,7 +235,7 @@
         sex = [data[@"sex"] integerValue];
         [self sexBtn:btn];
         
-        [_iconView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",IMGHEAD,data[@"photo"]]] placeholderImage:[UIImage imageNamed:@"caidanlan_icon_moren.png"] options:SDWebImageRefreshCached completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        [_iconView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",IMGHEAD,data[@"photo"]]] placeholderImage:[UIImage imageNamed:@"avatordefault"] options:SDWebImageRefreshCached completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
 //            headImage = image;
         }];
         if ([data[@"photo"] isKindOfClass:[NSString class]]) {
@@ -296,6 +296,7 @@
     if (_imagePicker == nil) {
         _imagePicker = [[UIImagePickerController alloc] init];
         _imagePicker.modalPresentationStyle= UIModalPresentationOverFullScreen;
+        _imagePicker.allowsEditing = YES;
         _imagePicker.delegate = self;
     }
     
@@ -320,7 +321,7 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     
-    UIImage *orgImage = info[UIImagePickerControllerOriginalImage];
+    UIImage *orgImage = info[UIImagePickerControllerEditedImage];
     [picker dismissViewControllerAnimated:YES completion:nil];
     [self performSelector:@selector(changephoto:) withObject:orgImage afterDelay:0.1];
     

@@ -37,7 +37,7 @@
  	
  	self.stepNunLabel.text = attStr;
     
-    [self.iconView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",IMGHEAD,[USERDefaults objectForKey:@"PHOTO"]]] placeholderImage:[UIImage imageNamed:@"paihangbang_morenxiao.png"]];
+    [self.iconView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",IMGHEAD,[USERDefaults objectForKey:@"PHOTO"]]] placeholderImage:[UIImage imageNamed:@"avatordefault"]];
  
     self.iconView.layer.cornerRadius = self.iconView.frame.size.height/2;
     self.iconView.layer.masksToBounds = YES;

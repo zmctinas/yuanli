@@ -223,6 +223,7 @@
 		EBB9BCC61CE5783000B4B99E /* inteheadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBB9BCC51CE5783000B4B99E /* inteheadView.xib */; };
 		EBB9BCCA1CE5843C00B4B99E /* scoreRuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB9BCC81CE5843C00B4B99E /* scoreRuleViewController.m */; };
 		EBB9BCCB1CE5843C00B4B99E /* scoreRuleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBB9BCC91CE5843C00B4B99E /* scoreRuleViewController.xib */; };
+		EBBCD0521CE95E3D00240633 /* processView.m in Sources */ = {isa = PBXBuildFile; fileRef = EBBCD0511CE95E3D00240633 /* processView.m */; };
 		EBEE90F01CE4594E000E8329 /* integralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBEE90EE1CE4594E000E8329 /* integralViewController.m */; };
 		EBEE90F11CE4594E000E8329 /* integralViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EBEE90EF1CE4594E000E8329 /* integralViewController.xib */; };
 		EBEE90F31CE45B34000E8329 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBEE90F21CE45B34000E8329 /* MessageUI.framework */; };
@@ -648,6 +649,8 @@
 		EBB9BCC71CE5843C00B4B99E /* scoreRuleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scoreRuleViewController.h; sourceTree = "<group>"; };
 		EBB9BCC81CE5843C00B4B99E /* scoreRuleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = scoreRuleViewController.m; sourceTree = "<group>"; };
 		EBB9BCC91CE5843C00B4B99E /* scoreRuleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = scoreRuleViewController.xib; sourceTree = "<group>"; };
+		EBBCD0501CE95E3D00240633 /* processView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = processView.h; sourceTree = "<group>"; };
+		EBBCD0511CE95E3D00240633 /* processView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = processView.m; sourceTree = "<group>"; };
 		EBEE90ED1CE4594E000E8329 /* integralViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = integralViewController.h; sourceTree = "<group>"; };
 		EBEE90EE1CE4594E000E8329 /* integralViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = integralViewController.m; sourceTree = "<group>"; };
 		EBEE90EF1CE4594E000E8329 /* integralViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = integralViewController.xib; sourceTree = "<group>"; };
@@ -1515,6 +1518,8 @@
 		BEDB3F3C1C892EB100E4A89E /* thirds */ = {
 			isa = PBXGroup;
 			children = (
+				EBBCD0501CE95E3D00240633 /* processView.h */,
+				EBBCD0511CE95E3D00240633 /* processView.m */,
 				BE62AB471CABB84A00EE60A1 /* Healthlib */,
 				BE3557191CA7765A0097E278 /* IQKeyBoardManager */,
 				BE18C9221CA0F39100B774F1 /* DateModel.h */,
@@ -1941,6 +1946,7 @@
 				BEDB3F8C1C89855B00E4A89E /* setMessageViewController.m in Sources */,
 				BE145C011C8ED5990067D621 /* listHeadView.m in Sources */,
 				BE3A5D8B1C8D5A1A007DA9B6 /* MyMD5.m in Sources */,
+				EBBCD0521CE95E3D00240633 /* processView.m in Sources */,
 				EBEE90F01CE4594E000E8329 /* integralViewController.m in Sources */,
 				BE63AD991C9F8EC700A3B3FD /* RSADataVerifier.m in Sources */,
 				EB8C547B1CD98A9D00875192 /* helpCenterViewController.m in Sources */,

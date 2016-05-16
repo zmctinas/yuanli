@@ -22,7 +22,7 @@
     [backBtn addTarget:self action:@selector(backBtn:) forControlEvents:UIControlEventTouchUpInside];
     backBtn.contentEdgeInsets = UIEdgeInsetsMake(0, -HEIGHT(15), 0, 0);
 //    backBtn.backgroundColor = [UIColor blackColor];
-    [backBtn setImage:[UIImage imageNamed:@"top_btn_fanhui_bai.png"] forState:UIControlStateNormal];
+    [backBtn setImage:[UIImage imageNamed:@"arrowleftwhite"] forState:UIControlStateNormal];
     UIBarButtonItem* im = [[UIBarButtonItem alloc]initWithCustomView:backBtn];
 //    self.navigationItem.leftItemsSupplementBackButton = YES;
     

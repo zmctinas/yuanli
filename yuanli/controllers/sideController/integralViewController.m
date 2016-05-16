@@ -78,7 +78,7 @@
 {
     headView.nameLabel.text = dic[@"title_name"];
     headView.integralLabel.text = [NSString stringWithFormat:@"积分%@",dic[@"score_points"]];
-    [headView.iconView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",IMGHEAD,dic[@"actor_url"]]] placeholderImage:[UIImage imageNamed:@""]];
+    [headView.iconView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",IMGHEAD,dic[@"actor_url"]]] placeholderImage:[UIImage imageNamed:@"avatordefault"]];
     NSLog(@"%@",[NSString stringWithFormat:@"%@%@",IMGHEAD,dic[@"actor_url"]]);
 }
 

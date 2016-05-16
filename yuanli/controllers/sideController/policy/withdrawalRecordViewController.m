@@ -52,7 +52,7 @@
         
         UIButton* btn = [UIButton buttonWithType:0];
         btn.frame = CGRectMake(0, 0, 40, 40);
-        [btn setImage:[UIImage imageNamed:@"top_btn_fanhui.png"] forState:UIControlStateNormal];
+        [btn setImage:[UIImage imageNamed:@"arrowleftwhite"] forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(backBtn:) forControlEvents:UIControlEventTouchUpInside];
         _leftItem = [[UIBarButtonItem alloc]initWithCustomView:btn];
     }

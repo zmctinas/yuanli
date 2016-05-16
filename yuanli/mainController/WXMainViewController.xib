@@ -13,7 +13,7 @@
                 <outlet property="gobuyBtn" destination="L6q-1e-3XD" id="FLf-s9-f2Y"/>
                 <outlet property="hotLabel" destination="YRB-sb-3iN" id="aNS-3O-tMY"/>
                 <outlet property="lengLabel" destination="Ecd-RC-6Kp" id="wx7-1B-cmG"/>
-                <outlet property="processView" destination="fsZ-e7-mG7" id="5Xk-xF-YtO"/>
+                <outlet property="processView" destination="fsZ-e7-mG7" id="erh-7X-ofh"/>
                 <outlet property="productBackView" destination="oqC-YQ-Kx1" id="W5F-cd-Cbh"/>
                 <outlet property="profitLabel" destination="edO-bA-gDD" id="66J-i1-YMj"/>
                 <outlet property="stepNumLabel" destination="iJP-tI-3B4" id="tWs-Ic-C4g"/>
@@ -135,9 +135,9 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今天" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GvK-iM-baR">
-                    <rect key="frame" x="125" y="27" width="63" height="21"/>
+                    <rect key="frame" x="129" y="27" width="63" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>

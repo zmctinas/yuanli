@@ -82,7 +82,7 @@
         self.weightLabel.text = [NSString stringWithFormat:@"%ldkg",[[USERDefaults objectForKey:@"weight"] integerValue]];
         self.taskStepNumLabel.text = [NSString stringWithFormat:@"%ld步",_stepNum];
         
-        [self.iconView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",IMGHEAD,[USERDefaults objectForKey:@"PHOTO"]]] placeholderImage:[UIImage imageNamed:@"caidanlan_icon_moren.png"]];
+        [self.iconView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",IMGHEAD,[USERDefaults objectForKey:@"PHOTO"]]] placeholderImage:[UIImage imageNamed:@"avatordefault"]];
         self.nickNameLabel.text = [USERDefaults objectForKey:@"userName"];
         NSLog(@"%@",[USERDefaults objectForKey:@"userName"]);
         self.sexLabel.text = [NSString stringWithFormat:@"性别:%@",[[USERDefaults objectForKey:@"SEX"] integerValue]==1?@"男":@"女"];
@@ -90,7 +90,7 @@
         NSString* title_url = [USERDefaults objectForKey:@"title_url"];
         NSString* title_name = [USERDefaults objectForKey:@"title_name"];
         if (title_url) {
-            [_junxianView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",IMGHEAD,title_url]] placeholderImage:[UIImage imageNamed:@""]];
+            [_junxianView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",IMGHEAD,title_url]] placeholderImage:[UIImage imageNamed:@"avatordefault"]];
         }
         if (title_name) {
             _sexLabel.text = title_name;

@@ -28,7 +28,9 @@
 
 
 - (IBAction)sexBtn:(UIButton *)sender;
+- (IBAction)zhuceBtn:(UIButton *)sender;
 
+- (IBAction)backBtn:(UIButton *)sender;
 
 
 
@@ -52,6 +54,8 @@
     
     self.iconView.layer.cornerRadius = self.iconView.frame.size.height/2;
     self.iconView.layer.masksToBounds = YES;
+    self.iconView.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.iconView.layer.borderWidth = 2;
     
     [self addheadImageAction];
     
@@ -61,6 +65,18 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 #pragma mark - pirvate
@@ -277,6 +293,7 @@
     if (_imagePicker == nil) {
         _imagePicker = [[UIImagePickerController alloc] init];
         _imagePicker.modalPresentationStyle= UIModalPresentationOverFullScreen;
+        _imagePicker.allowsEditing = YES;
         _imagePicker.delegate = self;
     }
     
@@ -288,7 +305,7 @@
     if (_rightItem == nil) {
         UIButton* btn = [UIButton buttonWithType:0];
         btn.frame = CGRectMake(0, 0, 40, 40);
-        [btn setTitle:@"确定" forState:UIControlStateNormal];
+        [btn setTitle:@"保存" forState:UIControlStateNormal];
         [btn setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(touchRightItem:) forControlEvents:UIControlEventTouchUpInside];
         _rightItem = [[UIBarButtonItem alloc]initWithCustomView:btn];
@@ -310,12 +327,23 @@
     
 }
 
+- (IBAction)zhuceBtn:(UIButton *)sender {
+    
+    [self touchRightItem:nil];
+    
+}
+
+- (IBAction)backBtn:(UIButton *)sender {
+    
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 #pragma mark - UIImagePickerControllerDelegate
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     
-    UIImage *orgImage = info[UIImagePickerControllerOriginalImage];
+    UIImage *orgImage = info[UIImagePickerControllerEditedImage];
     [picker dismissViewControllerAnimated:YES completion:nil];
     [self performSelector:@selector(changephoto:) withObject:orgImage afterDelay:0.1];
     

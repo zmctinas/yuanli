@@ -121,6 +121,10 @@
     
     [self initUI];
     
+//    NSTextAttachment
+//    NSAttributedString
+    
+    
 //
     
     // Do any additional setup after loading the view from its nib.
@@ -801,6 +805,14 @@
             [self presentViewController:sign animated:YES completion:^{
                 
             }];
+        }else
+        {
+            NSDictionary* dic = requestDic[@"data"][@"data"];
+            NSString* title_name = dic[@"title_name"];
+            NSString* title_url = dic[@"title_url"];
+            [USERDefaults setObject:title_name forKey:@"title_name"];
+            [USERDefaults setObject:title_url forKey:@"title_url"];
+            [USERDefaults synchronize];
         }
         
         NSString* msg = requestDic[@"data"][@"msg"];
@@ -826,7 +838,7 @@
         
         self.airLabel.text = requestDic[@"data"][@"data"][@"pm25"];
         self.airLabel.adjustsFontSizeToFitWidth = YES;
-        [self.weatherImage sd_setImageWithURL:[NSURL URLWithString:requestDic[@"data"][@"data"][@"dayPictureUrl"]] placeholderImage:[UIImage imageNamed:@""]];
+        [self.weatherImage sd_setImageWithURL:[NSURL URLWithString:requestDic[@"data"][@"data"][@"dayPictureUrl"]] placeholderImage:[UIImage imageNamed:@"avatordefault"]];
         NSString* shishi = [[requestDic[@"data"][@"data"][@"date"] componentsSeparatedByString:@"："] lastObject];
         NSMutableString* string = [NSMutableString stringWithString:shishi] ;
         [string deleteCharactersInRange:NSMakeRange(shishi.length - 1, 1)];
